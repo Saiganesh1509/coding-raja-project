@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap 5.0-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <!-- linking to css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Resume Generator</title>
+
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #makeCV , #makeCV * {
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./Images/logo-navbar.png"
+              class="navbar-image" onclick="display('sectionHome')"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <a class="nav-link active" id="navItem1" href="#sectionHome">
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+              <a class="nav-link" href="#homeSection" id="navItem2">Create Resume</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <!-- First Section Start -->
+    <section id="sectionHome">
+        <!-- home section -->
+        <div class="d-flex justify-content-center flex-column banner-section-bg-container" id="home">
+            <div class="text-center">
+                <h1 class="home-heading ">Create your professional CV <br/>in just 5 <span class = "text-lowercase text-primary">minutes!</span></h1>
+                <a class = "btn btn-lg text-capitalize btn-primary btn-banner fs-4 mt-5" href="#homeSection">let's get started</a>
+            </div>
+        </div>
+        <!-- select sectoion start -->
+        <div class="bg-secondary h-100 p-3" id="homeSection">
+            <div class="container">
+                <div class="row text-center">
+                        <div class = "col-12 mb-3">
+                            <h2 class = "text-dark ">Here are the Best Templates for you</h2>
+                            <p class = "text-dark">A great job application leads to a good interview. An amazing resume is what makes it all possible.</p>
+                        </div>
+                        <div class="col-12">
+                        <div class = "d-flex flex-row  justify-content-center">
+                            <div class = " position-relative col-md-6">
+                                <div class = "template-item-img mx-auto me-lg-0 position-relative">
+                                    <img src = "./Images/Basic.jpg" alt = "" class = "img-fluid cv-images">
+                                </div>
+                                <button class="btn btn-primary mt-3" onclick="display('sectionCV1')">Select</button>
+                            </div>
+
+                            <div class = "position-relative col-md-6">
+                                <div class = "template-item-img mx-auto ms-lg-0 position-relative">
+                                    <img src = "./Images/College.jpg" alt = "" class = "img-fluid cv-images">
+                                </div>
+                                <button class="btn btn-primary mt-3" onclick="display('sectionCV2')">Select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- select sectoion end -->
+        <!-- end of home section -->
+        <!-- fotter section start-->
+        <div class="footer-container">
+            <div class="container">
+                <div class="row p-5">
+                    <div class="col-4">
+                        <img src="./Images/logo-navbar.png" class="fottor-logo" />
+                    </div>
+                    <div class="col-md-8">
+                        <h1 class="text-dark">Made your own cv</h1>
+                        <p class="text-secoundary">Build CV is a CV builder that helps users like you to create stunning CVs within 4 minutes</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <h5 class="text-dark">Follow: </h5>
+                                <a  href="https://www.linkedin.com/in/nalajala-sai-ganesh-657851244/" target="_blank"><i class="fa-brands fa-linkedin icons-img"></i></a>
+                                <i class="fa-brands fa-twitter icons-img"></i>
+                                <i class="fa-brands fa-facebook icons-img"></i>
+                        </div>
+                        <div>
+                            <h3 >
+                                Made By Nalajala Sai Ganesh
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- fotter section end-->
+        </div>
+    </section>
+    <!-- First Section Start -->
+
+    <!-- Secound Page Start  Form 1-->
+    <section id="sectionCV1" class="FormToFill py-3">
+        <div class="container mb-3">
+            <h1 class="text-center mt-4">Resume Generator</h1>
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="cv-form-row-title bg-secondary">
+                        <h3>About Section</h3>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nameField">Your Name</label>
+                                <input type="text" id="nameField" placeholder="Enter here.." class="form-control"/> 
+                            </div>
+                            <div class="form-group">
+                                <label for="contactField">Your Contact</label>
+                                <input type="text" id="contactField" class="form-control" placeholder="Enter here.."/> 
+                            </div>
+                            <div class="form-group">
+                                <label for="addressField">Address</label>
+                                <textarea rows="9" id="addressField" class="form-control" placeholder="Enter here.."></textarea> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mt-3">
+                            <div class="form-group">
+                                <label for="photoField">Select Your Profile Picture</label>
+                                <input type="file" id="photoField" class="form-control" /> 
+                            </div>
+                            <h5 class="text-secondary">Importent Links</h5>
+                                <div class="form-group mt-1">
+                                    <label for="gitField">Mail</label>
+                                    <input type="text" id="gitField" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                                <div class="form-group mt-1">
+                                    <label for="linkedinField">LikedIn</label>
+                                    <input type="text" id="linkedinField" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                                
+                                <div class="form-group mt-1">
+                                    <label for="portfolioField">Portfolio</label>
+                                    <input type="text" id="portfolioField" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="cv-form-row-title bg-secondary">
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="form-group" id="sk">
+                            <div >
+                            <label for="skillField">Skill</label>
+                            <input type="text" id="skillField" class="form-control skField" placeholder="Enter here.."/>
+                            </div> 
+                        </div>
+                        <div class="container mt-3" id="skillAddButton">
+                            <button class="btn btn-primary" onclick="addNewSkillField()" >Add</button>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="cv-form-row-title bg-secondary">
+                            <h3>Achievements</h3>
+                        </div>
+                        <div class="form-group" id="ach">
+                            <div >
+                            <label for="achField">Achievement</label>
+                            <input type="text" id="achField" class="form-control acField" placeholder="Enter here.."/>
+                            </div> 
+                        </div>
+                        <div class="container mt-3" id="">
+                            <button class="btn btn-primary" onclick="addNewachField()" >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 ">
+                    <div class="cv-form-row-title bg-secondary mt-3">
+                        <h3>Professional Information</h3>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="objectiveField">Objective</label>
+                                <textarea rows="5" id="objectiveField" class="form-control" placeholder="Enter here.."></textarea> 
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="cv-form-row-title bg-secondary">
+                                <h3>Work Experience</h3>
+                            </div>
+                            <div class="form-group" id="we">
+                                <div >
+                                <label for="workField">Work Experience</label>
+                                <textarea rows="5" id="workField" class="form-control weField" placeholder="Enter here.."></textarea>
+                                </div> 
+                            </div>
+                            <div class="container mt-3" id="weAddButton">
+                                <button class="btn btn-primary" onclick="addNewWEField()" >Add</button>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="cv-form-row-title bg-secondary">
+                                <h3>Acadamic Qulifications</h3>
+                            </div>
+                            <div class="form-group" id="aq">
+                                <div>
+                                <label for="acadamicField">Acadamic Qulification</label>
+                                <textarea rows="5" id="acadamicField" class="form-control eqField" placeholder="Enter here.."></textarea> 
+                                </div>
+                            </div>
+                            <div class="container mt-3" id="aqAddButton" >
+                                <button class="btn btn-primary" onclick="addNewAQField()">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-3">
+                
+                <!-- Button trigger modal -->
+                <button onclick="display('sectionResultForm1'), generateCV()"  type="button" class="btn btn-primary btn-lg" >
+                    Generate CV
+                </button>
+                <button onclick="display('sectionHome')"  type="button" class="btn btn-warning btn-lg" >
+                    Back
+                </button>
+
+                
+            </div>
+        </div>
+    </section>
+    <!-- Secound Page End Form 1-->
+
+    <!-- CV  1 Start-->
+    <section id="sectionResultForm1">
+        <div class="container genratedCvImageCon" id="makeCV">
+            <div class="row">
+                <div class="col-4 text-left">
+                    <!-- first Column -->
+                    <div class="text-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz86dVC8nNqS7NzLYt9dj9qZi0UBwHIZSRHQ&usqp=CAU" class="img-fluid cv-image" id="imageT" />
+                    </div>
+                    <h2 class="cv-name" id="nameT">Nalajala Sai Ganesh</h2>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Summary</h5>
+                    <hr />
+                    <p class="cv-phone" id="contactT">+91 9XXXXXXXXX</p>
+                    <p class="cv-address" id="addressT">Andhra Pradesh</p>
+                    <p>
+                        <a href="" id="linedkInT">http:linkdin.com</a>
+                    </p>
+                    <p>
+                        <a href="" id="gitT">http:github.com</a>
+                    </p>
+                    <p>
+                        <a href="" id="portfolioT">http:portfolio.com</a>
+                    </p>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Skills</h5>
+                    <hr />
+                        <ul id="skillsT" style="list-style-type: none;">
+                        </ul>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Achievements: </h5>
+                    <hr />
+                        <ul id="achT" style="list-style-type: none;">
+                            <li>make it achivements</li>
+                        </ul>
+                    <hr />
+                </div>
+                
+                <div class="col-8 py-5 ">
+                    <!-- secound column -->
+
+                    <!-- objective card start-->
+                    <div class="card text-left">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Objective</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT">
+                                A career objective is a concise statement that outlines your short-term and long-term career goals. It is typically placed at the top of a resume and should be tailored to the specific job you are applying for. When writing a career objective, it's important to be specific about what you hope to achieve in your career, including the skills you want to develop and the types of positions you are interested in. A strong career objective can help recruiters see that you have clear goals and are motivated to achieve them. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- objective card end-->
+
+                    <!-- work experience -->
+                    <div class="card text-left mt-3">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Work Experience</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT" style="list-style-type: none;">
+                                <li >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, sunt.</li>                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Academic Qulifications -->
+                    <div class="card text-left mt-3">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Academic Qulifications</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT" style="list-style-type: none;">
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, sunt.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container my-3 text-center">
+            <button class="btn btn-primary" id="printCV" >Print CV</button>
+            <button class="btn btn-warning" onclick="display('sectionCV1')" id="printCV" >Back</button>
+        </div>
+    </section>
+    <!-- CV  2 End-->
+    <!-- Secound Page Start  Form 2-->
+    <section id="sectionCV2" class="FormToFill py-3">
+        <div class="container mb-3">
+            <h1 class="text-center mt-4">Resume Generator</h1>
+            <div class="row">
+                <div class="col-12 ">
+                    <div class="cv-form-row-title bg-secondary">
+                        <h3>About Section</h3>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="nameField2">Your Name</label>
+                                <input type="text" id="nameField2" placeholder="Enter here.." class="form-control"/> 
+                            </div>
+                            <div class="form-group">
+                                <label for="contactField2">Your Contact</label>
+                                <input type="text" id="contactField2" class="form-control" placeholder="Enter here.."/> 
+                            </div>
+                            <div class="form-group">
+                                <label for="addressField2">Address</label>
+                                <textarea rows="9" id="addressField2" class="form-control" placeholder="Enter here.."></textarea> 
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mt-3">
+                            <div class="form-group">
+                                <label for="photoField2">Select Your Profile Picture</label>
+                                <input type="file" id="photoField2" class="form-control" /> 
+                            </div>
+                            <h5 class="text-secondary">Importent Links</h5>
+                                <div class="form-group mt-1">
+                                    <label for="gitField2">Mail</label>
+                                    <input type="text" id="gitField2" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                                <div class="form-group mt-1">
+                                    <label for="linkedinField2">LikedIn</label>
+                                    <input type="text" id="linkedinField2" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                                
+                                <div class="form-group mt-1">
+                                    <label for="portfolioField2">Portfolio</label>
+                                    <input type="text" id="portfolioField2" class="form-control" placeholder="Enter here.."/> 
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="cv-form-row-title bg-secondary">
+                            <h3>Skills</h3>
+                        </div>
+                        <div class="form-group" id="sk2">
+                            <div >
+                            <label for="skillField">Skill</label>
+                            <input type="text" id="skillField" class="form-control skField2" placeholder="Enter here.."/>
+                            </div> 
+                        </div>
+                        <div class="container mt-3" id="">
+                            <button class="btn btn-primary" onclick="addNewSkillField2()" >Add</button>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <div class="cv-form-row-title bg-secondary">
+                            <h3>Achievements</h3>
+                        </div>
+                        <div class="form-group" id="ach2">
+                            <div >
+                            <label for="achField">Achievement</label>
+                            <input type="text" id="achField" class="form-control acField2" placeholder="Enter here.."/>
+                            </div> 
+                        </div>
+                        <div class="container mt-3" id="">
+                            <button class="btn btn-primary" onclick="addNewachField2()" >Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 ">
+                    <div class="cv-form-row-title bg-secondary mt-3">
+                        <h3>Professional Information</h3>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label for="objectiveField2">Objective</label>
+                                <textarea rows="5" id="objectiveField2" class="form-control" placeholder="Enter here.."></textarea> 
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="cv-form-row-title bg-secondary">
+                                <h3>Work Experience</h3>
+                            </div>
+                            <div class="form-group" id="we2">
+                                <div >
+                                <label for="workField">Work Experience</label>
+                                <textarea rows="5" id="workField" class="form-control weField2" placeholder="Enter here.."></textarea>
+                                </div> 
+                            </div>
+                            <div class="container mt-3" id="weAddButton">
+                                <button class="btn btn-primary" onclick="addNewWEField2()" >Add</button>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <div class="cv-form-row-title bg-secondary">
+                                <h3>Acadamic Qulifications</h3>
+                            </div>
+                            <div class="form-group" id="aq2">
+                                <div>
+                                <label for="acadamicField">Acadamic Qulification</label>
+                                <textarea rows="5" id="acadamicField" class="form-control eqField2" placeholder="Enter here.."></textarea> 
+                                </div>
+                            </div>
+                            <div class="container mt-3" id="aqAddButton" >
+                                <button class="btn btn-primary" onclick="addNewAQField2()">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center mt-3">
+                
+                <!-- Button trigger modal -->
+                <button onclick="display('sectionResultForm2'), generateCV2()"  type="button" class="btn btn-primary btn-lg" >
+                    Generate CV
+                </button>
+                <button onclick="display('sectionHome')"  type="button" class="btn btn-warning btn-lg" >
+                    Back
+                </button>
+
+                
+            </div>
+        </div>
+    </section>
+    <!-- Secound Page End Form 2-->
+
+    <!-- CV  2 Start-->
+    <section id="sectionResultForm2">
+        <div class="container genratedCvImageCon" id="makeCV">
+            <div class="row">
+                <div class="col-4 text-left ">
+                    <!-- first Column -->
+                    <h2 class="cv-name" id="nameT2" style="font-weight: 700;font-size: 80px;">Narendra Kumar Mone</h2>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Summary</h5>
+                    <hr />
+                    <p class="cv-phone" id="contactT2">+91 9XXXXXXXXX</p>
+                    <p class="cv-address" id="addressT2">H.No: 4/19539-2-123, Gandhi nagar, Yemmigaur</p>
+                    <p>
+                        <a href="" id="linedkInT2">http:linkdin.com</a>
+                    </p>
+                    <p>
+                        <a href="" id="gitT2">http:github.com</a>
+                    </p>
+                    <p>
+                        <a href="" id="portfolioT2">http:portfolio.com</a>
+                    </p>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Achievements: </h5>
+                    <hr />
+                        <ul id="achT2" style="list-style-type: none;">
+                            <li>Lorem ipsum</li>
+                        </ul>
+                    <hr />
+                    <h5 class="cv-heading mt-3">Skills: </h5>
+                    <hr />
+                        <ul id="skillsT2" style="list-style-type: none;">
+                            <li>Lorem ipsum</li>
+                        </ul>
+                </div>
+                
+                <div class="col-8 py-5 ">
+                    <!-- profile pic -->
+                    <div class="text-right">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz86dVC8nNqS7NzLYt9dj9qZi0UBwHIZSRHQ&usqp=CAU" class="img-fluid cv-image" id="imageT2" />
+                    </div>
+                    <!-- secound column -->
+                    <!-- objective card start-->
+                    <div class="card text-left">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Objective</h5>
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT2">
+                                A career objective is a concise statement that outlines your short-term and long-term career goals. It is typically placed at the top of a resume and should be tailored to the specific job you are applying for. When writing a career objective, it's important to be specific about what you hope to achieve in your career, including the skills you want to develop and the types of positions you are interested in. A strong career objective can help recruiters see that you have clear goals and are motivated to achieve them. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- objective card end-->
+
+                    <!-- work experience -->
+                    <div class="card text-left mt-3">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Work Experience</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT2" style="list-style-type: none;">
+                                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, sunt.</li>                                                             
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Academic Qulifications -->
+                    <div class="card text-left mt-3">
+                        <div class="card-header">
+                            <h5 class="cv-heading mt-3 ">Academic Qulifications</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT2" style="list-style-type: none;">
+                                <li >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim, sunt.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="container my-3 text-center">
+            <button class="btn btn-primary" id="printCV2" onclick="printingCV2()" >Print CV</button>
+            <button class="btn btn-warning" onclick="display('sectionCV2')" id="printCV" >Back</button>
+        </div>
+    </section>
+    <!-- CV 2 End -->
+
+
+    <!-- page change ccbp -->
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+    
+    <!-- link to javaScript -->
+    <script src="./script.js" ></script>
+</body>
+</html>

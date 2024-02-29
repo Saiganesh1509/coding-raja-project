@@ -1,0 +1,48 @@
+/* fort page */
+.navbar-image {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+  }
+  .banner-section-bg-container {
+    height: 100vh;
+  }
+  .home-heading{
+    color: #ff8080;
+  }
+  .cv-images{
+    height: 400px;
+  }
+  .footer-container{
+    height: 30vh;
+  }
+  .fottor-logo{
+    height: 180px;
+  }
+  .icons-img{
+    font-size: 30px;
+    padding: 20px;
+  }
+
+  /* cv page */
+
+  .cv-form-row-title{
+    border-radius: 10px;
+    color: white;
+    padding: 0.1rem 1.6rem;
+}
+/* cv flow generated */
+
+.genratedCvImageCon{
+  border:2px solid rgb(8, 8, 8);
+  padding: 20px;
+}
+.cv-image{
+  border-radius: 50%;
+  width: 200px;
+}
+
+.cv-heading{
+  font-weight: 900;
+}
+
